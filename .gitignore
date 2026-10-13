@@ -1,0 +1,38 @@
+# ---- Build output ----
+target/
+out/
+*.class
+*.modl
+
+# ---- IDEs (run configurations hold your API key: keep them out of git) ----
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+
+# ---- Release folders (handed to clients, never committed) ----
+release/
+
+# ---- Secrets: never commit ----
+.env
+*.env
+*.jks
+*.p12
+*.pfx
+*.keystore
+*.p7b
+*.pem
+*.key
+*.crt
+*.cer
+arifa-local.properties
+signing/
+/signing
+gitleaks-report.json
+
+# ---- OS clutter ----
+.DS_Store
+Thumbs.db
+desktop.ini

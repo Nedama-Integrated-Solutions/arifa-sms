@@ -1,0 +1,12 @@
+title = "Arifa secret scanning rules"
+
+# Keep all of gitleaks' built-in rules ...
+[extend]
+useDefault = true
+
+# ... and add one for Africa's Talking API keys, which the built-in rules do not know by name.
+[[rules]]
+id = "africastalking-api-key"
+description = "Africa's Talking API key"
+regex = '''atsk_[A-Za-z0-9]{20,}'''
+tags = ["key", "africastalking"]

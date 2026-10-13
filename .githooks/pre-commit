@@ -1,0 +1,15 @@
+#!/bin/sh
+# Blocks any commit that contains a secret (API keys, tokens, private keys).
+#
+# One-time setup in every clone of this repo:
+#     git config core.hooksPath .githooks
+#
+# Needs gitleaks on your PATH. See docs/dev-setup.md.
+
+if ! command -v gitleaks >/dev/null 2>&1; then
+  echo "pre-commit: gitleaks is not installed or not on PATH." >&2
+  echo "Install it (docs/dev-setup.md) before committing. Commit blocked." >&2
+  exit 1
+fi
+
+exec gitleaks git --pre-commit --redact --staged --verbose
