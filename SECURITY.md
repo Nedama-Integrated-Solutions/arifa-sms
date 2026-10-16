@@ -32,7 +32,7 @@ guess is an SMS they pay for.
 
 ## The API key
 
-The key is stored in an `EncodedStringField`, which Ignition encodes with its `GatewaySec` class. Ignition's
+**On Ignition 8.1** the key is stored in an `EncodedStringField`, which Ignition encodes with its `GatewaySec` class. Ignition's
 8.1 SDK documentation for that class says it **uses a default encryption key unless the gateway administrator sets
 a custom one** with the `-DencodingKey` startup option. This was not tested by decrypting a key from a real gateway
 database, so it rests on that documentation.
@@ -41,7 +41,13 @@ In practice: on a gateway with Ignition's default settings, someone who obtains 
 database, for example from a backup, may be able to recover the Africa's Talking key. That is a property of Ignition's
 secret storage in general, not of Arifa, and Arifa cannot change it.
 
-**Recommended:** set a custom encoding key on the gateway, protect gateway backups as you would a file that holds a
+**On Ignition 8.3** the key is stored as an *embedded secret*. Ignition's Secrets Management encrypts it when the
+profile is saved, and keeps it out of the shared gateway configuration. The settings screen also offers *Referenced*,
+to take the key from a secret provider. Inductive Automation's own tutorial notes that, in its example, a secret was
+encrypted with the default encryption key, so the advice below still applies: follow Inductive Automation's Secrets
+Management documentation to harden your gateway's encryption, and protect gateway backups.
+
+**Recommended:** on 8.1, set a custom encoding key on the gateway. On both, protect gateway backups as you would a file that holds a
 live API key, and use a separate Africa's Talking account, and so a separate key, for each site. If a key is
 exposed, generate a new one in the Africa's Talking dashboard, which replaces the old one, and update the profile.
 

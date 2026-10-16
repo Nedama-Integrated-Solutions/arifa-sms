@@ -7,7 +7,7 @@
     <parent>
         <groupId>com.nedama.arifa</groupId>
         <artifactId>arifa-parent</artifactId>
-        <version>0.9.0</version>
+        <version>0.10.0</version>
     </parent>
 
     <artifactId>arifa-core</artifactId>

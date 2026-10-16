@@ -6,7 +6,7 @@
 
     <groupId>com.nedama.arifa</groupId>
     <artifactId>arifa-parent</artifactId>
-    <version>0.9.0</version>
+    <version>0.10.0</version>
     <packaging>pom</packaging>
 
     <name>Arifa SMS Notification (parent)</name>
@@ -20,7 +20,9 @@
         <!-- Ignition 8.1 adapter and the module packaging for it -->
         <module>gateway-81</module>
         <module>build-81</module>
-        <!-- Phase 6 adds: gateway-83 and build-83 -->
+        <!-- Ignition 8.3 adapter and the module packaging for it -->
+        <module>gateway-83</module>
+        <module>build-83</module>
     </modules>
 
     <properties>
@@ -37,6 +39,18 @@
         <ignition-sdk-version>${ignition-platform-version}</ignition-sdk-version>
         <!-- The oldest gateway the module will install on. 8.1.33 is the first that runs on Java 17. -->
         <arifa.required-ignition-version>8.1.33</arifa.required-ignition-version>
+
+        <!-- Ignition 8.3 SDK, pinned to the OLDEST 8.3 gateway the module supports, for the same reason as above.
+             8.3.3 is the first release with the secret reference helper that the API key field uses.
+             Never use a -SNAPSHOT here. -->
+        <ignition-83-platform-version>8.3.3</ignition-83-platform-version>
+        <ignition-83-sdk-version>${ignition-83-platform-version}</ignition-83-sdk-version>
+        <arifa.required-ignition-83-version>8.3.3</arifa.required-ignition-83-version>
+
+        <!-- The version written into the 8.3 module. It follows the project version. A development build can override
+             it on the command line, for example -Darifa.module-version-83=0.10.0.1, so the gateway's Modules page
+             shows which test build is loaded. -->
+        <arifa.module-version-83>${project.version}</arifa.module-version-83>
     </properties>
 
     <pluginRepositories>

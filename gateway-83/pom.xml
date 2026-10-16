@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.nedama.arifa</groupId>
+        <artifactId>arifa-parent</artifactId>
+        <version>0.10.0</version>
+    </parent>
+
+    <artifactId>arifa-gateway-83</artifactId>
+    <packaging>jar</packaging>
+
+    <!-- Must equal the artifactId: the Ignition Maven plugin matches projectScopes against the project name. -->
+    <name>arifa-gateway-83</name>
+    <description>The Ignition 8.3 gateway adapter. Thin glue around arifa-core.</description>
+
+    <dependencies>
+        <!-- Our own library, the same one the 8.1 module uses. Bundled into the module by build-83. -->
+        <dependency>
+            <groupId>com.nedama.arifa</groupId>
+            <artifactId>arifa-core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <!-- Ignition 8.3 SDK. Provided by the gateway at runtime, same set as IA's 8.3 Slack alarm notification example. -->
+        <dependency>
+            <groupId>com.inductiveautomation.ignitionsdk</groupId>
+            <artifactId>ignition-common</artifactId>
+            <version>${ignition-83-sdk-version}</version>
+            <type>pom</type>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.inductiveautomation.ignitionsdk</groupId>
+            <artifactId>gateway-api</artifactId>
+            <version>${ignition-83-sdk-version}</version>
+            <type>pom</type>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.inductiveautomation.ignitionsdk</groupId>
+            <artifactId>alarm-notification-common</artifactId>
+            <version>${ignition-83-sdk-version}</version>
+            <type>pom</type>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.inductiveautomation.ignitionsdk</groupId>
+            <artifactId>alarm-notification-gateway-api</artifactId>
+            <version>${ignition-83-sdk-version}</version>
+            <type>pom</type>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+</project>

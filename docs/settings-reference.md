@@ -12,8 +12,11 @@ shown here.
 | Live | off | Off sends to Africa's Talking's free simulator, with the username `sandbox` and a sandbox key. On sends real SMS, billed to the account |
 | Sender ID | blank | The registered sender name, or the shortcode when replies are used. Blank uses Africa's Talking's default sender |
 
-The **API Key** appears on the form as **two boxes, both labelled Password**. That is Ignition's standard password
-editor, and the module cannot relabel it. Type the key in the first box and the same key again in the second.
+On **Ignition 8.1** the **API Key** appears as **two boxes, both labelled Password**. That is Ignition's standard
+password editor. Type the key in the first box and the same key again in the second.
+
+On **Ignition 8.3** the **API Key** is a secret field with three choices. Choose **Embedded**, then type the key.
+Choose **Referenced** only to take the key from a secret provider. Leave it on **None** and the profile cannot send.
 
 ## Delivery
 

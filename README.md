@@ -5,18 +5,19 @@
 ### [Nedama Integrated Solutions](https://nedama.com)
 
 [![build](https://github.com/Nedama-Integrated-Solutions/arifa-sms/actions/workflows/build.yml/badge.svg)](https://github.com/Nedama-Integrated-Solutions/arifa-sms/actions/workflows/build.yml)
-[![Ignition](https://img.shields.io/badge/Ignition-8.1-orange)](https://inductiveautomation.com/)
+[![Ignition](https://img.shields.io/badge/Ignition-8.1%20%7C%208.3-orange)](https://inductiveautomation.com/)
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue)](LICENSE)
 
 ## Directory
 
 | Module | Description | Release Notes |
 | --- | --- | --- |
-| [Arifa SMS Notification](docs/install-guide.md) | Sends alarm notifications as SMS through Africa's Talking. The operator can acknowledge an alarm by replying to the SMS. | [![version](https://img.shields.io/github/v/release/Nedama-Integrated-Solutions/arifa-sms?style=for-the-badge&label=version)](CHANGELOG.md) |
+| [Arifa SMS Notification for Ignition 8.1](docs/install-guide.md) | Sends alarm notifications as SMS through Africa's Talking. The operator can acknowledge an alarm by replying to the SMS. | [![version](https://img.shields.io/github/v/release/Nedama-Integrated-Solutions/arifa-sms?style=for-the-badge&label=version)](CHANGELOG.md) |
+| [Arifa SMS Notification for Ignition 8.3](docs/install-guide.md) | Sends alarm notifications as SMS through Africa's Talking. The operator can acknowledge an alarm by replying to the SMS. | [![version](https://img.shields.io/github/v/release/Nedama-Integrated-Solutions/arifa-sms?style=for-the-badge&label=version)](CHANGELOG.md) |
 
 ## Verify
 
-Ignition shows a certificate **Thumbprint** when you install the module. It must read:
+Both modules are signed with the same certificate. Ignition shows its **Thumbprint** when you install the module. It must read:
 
 ```
 65 83 84 55 22 06 7C CC F9 C6 9B C6 F3 C6 41 98 3A 28 BD 20
