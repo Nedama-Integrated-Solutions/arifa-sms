@@ -8,6 +8,8 @@
 [![Ignition](https://img.shields.io/badge/Ignition-8.1%20%7C%208.3-orange)](https://inductiveautomation.com/)
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue)](LICENSE)
 
+**Full manual, with screenshots:** [docs.nedama.com/arifa](https://docs.nedama.com/arifa/)
+
 ## Directory
 
 | Module | Description | Release Notes |
@@ -23,6 +25,8 @@ Both modules are signed with the same certificate. Ignition shows its **Thumbpri
 65 83 84 55 22 06 7C CC F9 C6 9B C6 F3 C6 41 98 3A 28 BD 20
 ```
 
+Step-by-step install and verify guide, with screenshots: [docs.nedama.com/arifa/install-and-verify](https://docs.nedama.com/arifa/install-and-verify/)
+
 ## Build
 
 ```
@@ -35,6 +39,7 @@ Needs JDK 17 and Maven 3.8 or later.
 
 ## Links
 
+- [Manual](https://docs.nedama.com/arifa/)
 - [Downloads](../../releases)
 - [Install guide](docs/install-guide.md) and [settings](docs/settings-reference.md)
 - [Security policy](SECURITY.md)
