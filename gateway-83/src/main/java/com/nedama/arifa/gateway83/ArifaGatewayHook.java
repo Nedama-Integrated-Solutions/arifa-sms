@@ -58,6 +58,15 @@ public class ArifaGatewayHook extends AbstractGatewayModuleHook {
         return true;
     }
 
+    /**
+     * Ignition Maker Edition only runs a third-party module that opts in here. Without this, Maker removes the
+     * module or refuses to start it with "Not eligible for use with Ignition Maker Edition".
+     */
+    @Override
+    public boolean isMakerEditionCompatible() {
+        return true;
+    }
+
     @Override
     public List<? extends ExtensionPoint<?>> getExtensionPoints() {
         return List.of(new ArifaSmsExtensionPoint());

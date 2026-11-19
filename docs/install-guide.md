@@ -23,7 +23,7 @@ Ignition checks the module's signature when you install it, so a changed file is
 module first, on any machine with a JDK, using `tools/VerifyModule.java` from this repository:
 
 ```
-java tools/VerifyModule.java Arifa-SMS-Notification-0.10.0-ignition-8.3.modl
+java tools/VerifyModule.java Arifa-SMS-Notification-0.10.1-ignition-8.3.modl
 ```
 
 It ends with `RESULT: OK` and prints the certificate thumbprint, which must match the one in the
@@ -92,6 +92,7 @@ Every setting is explained in [settings-reference.md](settings-reference.md).
 - Reply codes are kept in memory, so after a gateway restart or a failover, replies to earlier messages are ignored.
 - Africa's Talking is the only provider today. Ignition 8.1 (8.1.33 or later) and 8.3 (8.3.3 or later) are supported.
 - Replies were tested against Africa's Talking's sandbox. They have not been tested on a live shortcode.
+- Runs on Ignition Maker Edition (free, non-commercial use). Tested on Maker Edition 8.3. Maker's own limits apply to the gateway.
 - Tested with Kenyan numbers. For another country, set Default Country Code and Expected Cost Currency on the profile.
 - A profile saved on an 8.1 gateway is not carried over when the gateway is upgraded to 8.3. Install the 8.3 module and
   create the profile again.

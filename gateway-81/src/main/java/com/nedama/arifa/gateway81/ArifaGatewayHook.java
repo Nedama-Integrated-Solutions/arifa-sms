@@ -72,6 +72,15 @@ public class ArifaGatewayHook extends AbstractGatewayModuleHook implements Modul
         return true;
     }
 
+    /**
+     * Ignition Maker Edition only runs a third-party module that opts in here. Without this, Maker removes the
+     * module or refuses to start it with "Not eligible for use with Ignition Maker Edition".
+     */
+    @Override
+    public boolean isMakerEditionCompatible() {
+        return true;
+    }
+
     @Override
     public void startup(LicenseState licenseState) {
         // Nothing to do. The profile type is added when the alarm notification service becomes ready.

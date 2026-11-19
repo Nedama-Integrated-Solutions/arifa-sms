@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.10.1
+
+- The module now runs on **Ignition Maker Edition**. Before this, Maker removed it or refused to start it with
+  "Not eligible for use with Ignition Maker Edition".
+- Tested on Maker Edition 8.3. The 8.1 module has the same change but has not been tested on Maker Edition 8.1.
+- No other change.
+
 ## 0.10.0
 
 - New: a module for **Ignition 8.3** (8.3.3 or later, tested on 8.3.10), with the same features and settings as the 8.1
